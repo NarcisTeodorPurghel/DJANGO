@@ -1,0 +1,22 @@
+SQL_SETUP ON LINUX 
+
+- sudo apt install python3-mysqldb
+- sudo apt install mysql-client libmysqlclient-dev
+- pip install mysqlclient
+- open settings file in the project folder
+- /home/narcis/Code/Python/MYSQL_SETUP/myvenv/bin/python3
+- in new terminal run : mysql -u narcis -p (password:nar30adsql)
+- CREATE  DATABASE mydbsetup CHARACTER SET utf8;
+- DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydbsetup',
+        'USER': 'narcis',
+        'PASSWORD': 'nar30adminsql',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+    }
+}
+- pyhton3 manage.py migrate 
+
